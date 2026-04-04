@@ -16,11 +16,12 @@ const imageUrls = [
   "/images/react2.webp",
   "/images/next2.webp",
   "/images/node2.webp",
-  "/images/express.webp",
-  "/images/mongo.webp",
-  "/images/mysql.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
+  "https://placehold.co/256/10A37F/FFFFFF/png?text=OpenAI",
+  "https://placehold.co/256/D97757/FFFFFF/png?text=Claude",
+  "https://placehold.co/256/FF6C37/FFFFFF/png?text=n8n",
+  "https://placehold.co/256/000000/FFFFFF/png?text=Anti-Grav",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 

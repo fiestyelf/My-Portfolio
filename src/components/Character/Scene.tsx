@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
+import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import setCharacter from "./utils/character";
 import setLighting from "./utils/lighting";
 import { useLoading } from "../../context/LoadingProvider";
@@ -60,9 +61,35 @@ const Scene = () => {
           mixer = animations.mixer;
           let character = gltf.scene;
           setChar(character);
+
           scene.add(character);
           headBone = character.getObjectByName("spine006") || null;
           screenLight = character.getObjectByName("screenlight") || null;
+
+          if (headBone) {
+            const gltfLoader = new GLTFLoader();
+            gltfLoader.load("/models/glasses/scene.gltf", (glassesGltf: any) => {
+              const glasses = glassesGltf.scene;
+              // Sweet spot between 0.95 (inside) and 1.15 (too far)
+              glasses.scale.set(1.0, 1.0, 1.0);
+              glasses.position.set(0, 1.15, 1.05);
+              glasses.rotation.set(0, 0, 0);       
+              
+              // Traverse glasses and modify materials if needed (e.g. darker frames)
+              glasses.traverse((node: any) => {
+                if ((node as THREE.Mesh).isMesh) {
+                  const mesh = node as THREE.Mesh;
+                  mesh.castShadow = true;
+                  if (mesh.material) {
+                    const material = mesh.material as THREE.MeshStandardMaterial;
+                    material.roughness = 0.2;
+                  }
+                }
+              });
+              
+              headBone!.add(glasses);
+            });
+          }
           progress.loaded().then(() => {
             setTimeout(() => {
               light.turnOnLights();

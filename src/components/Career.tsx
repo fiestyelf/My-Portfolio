@@ -15,58 +15,37 @@ const Career = () => {
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Co-Founder</h4>
-                <h5>CallHQ.ai</h5>
+                <h4>MBA Candidate</h4>
+                <h5>Univ. of Europe for App. Sci., Berlin</h5>
               </div>
               <h3>NOW</h3>
             </div>
             <p>
-              Building CallHQ.ai, a voice AI platform for
-              automating customer calls, support, and conversions.
+              Pursuing an MBA in International Business. Graduated with a BBA in Business Analytics from Christ University in 2023.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Adobe</h4>
-                <h5>6+ years · Noida</h5>
+                <h4>Marketing Specialist</h4>
+                <h5>Antrajaal, India</h5>
               </div>
-              <h3>2017–24</h3>
+              <h3>2024–25</h3>
             </div>
             <p>
-              Senior Lead Software Engineer (Feb 2024 – May 2024). Lead Software
-              Engineer (Feb 2021 – Feb 2024). Software Engineer II (Dec 2017 –
-              Feb 2021): internationalization, globalization, and localization for
-              Adobe Technical Communication Suite; functional and linguistic testing
-              strategy; in-house tooling; collaboration with product and engineering
-              for high-quality localized releases.
+              Provided L2 technical support for a Salesforce-based B2B telecommunications platform, escalating complex issues via Jira and coordinating with engineering teams to resolve bugs.
             </p>
           </div>
           <div className="career-info-box">
             <div className="career-info-in">
               <div className="career-role">
-                <h4>Consultant</h4>
-                <h5>Genpact Headstrong </h5>
+                <h4>Sales & Marketing Executive</h4>
+                <h5>Saket Fincorp, India</h5>
               </div>
-              <h3>2016–17</h3>
+              <h3>2023–24</h3>
             </div>
             <p>
-              Sep 2016 – Nov 2017. Developed and maintained WCF services consumed
-              by the UI; deployment support across environments; NUnit tests and
-              coverage; bug fixes from QA and users; database work.
-            </p>
-          </div>
-          <div className="career-info-box">
-            <div className="career-info-in">
-              <div className="career-role">
-                <h4>Sf Engineer</h4>
-                <h5>Infogain</h5>
-              </div>
-              <h3>2013-16</h3>
-            </div>
-            <p>
-              Software engineering across enterprise projects, contributing to
-              design, development, and delivery of business applications.
+              Developed frontend features for an enterprise airline booking platform using React, TypeScript, and Redux. Participated in client requirement discussions and collaborated closely with backend developers.
             </p>
           </div>
         </div>
