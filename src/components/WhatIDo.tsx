@@ -90,14 +90,15 @@ const WhatIDo = () => {
               <h3>DIGITAL MARKETING</h3>
               <h4>Client Acquisition & Analytics</h4>
               <p>
-                Specialist in lead generation, consultative selling, and driving marketing performance through data-driven decisions.
+                I work on lead generation and client acquisition, with a focus on tracking what the numbers actually say and adjusting campaigns based on that.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">Google Ads</div>
+                <div className="what-tags">Meta Ads</div>
                 <div className="what-tags">Google Analytics GA4</div>
-                <div className="what-tags">Looker Studio</div>
                 <div className="what-tags">CRM (Salesforce)</div>
+                <div className="what-tags">Canva</div>
                 <div className="what-tags">Content Strategy</div>
                 <div className="what-tags">Market Research</div>
               </div>
@@ -126,15 +127,16 @@ const WhatIDo = () => {
               <h3>FRONTEND DEV & AI AUTOMATION</h3>
               <h4>Interactive UIs & Agentic Workflows</h4>
               <p>
-                I build scalable enterprise platforms and seamlessly integrate AI automation tools to optimize workflows and create intelligent agent architectures.
+                I build frontend apps with React and TypeScript, and I'm actively learning how to wire up AI agents and automation pipelines using tools like n8n, Claude, and OpenAI.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">React &amp; TypeScript</div>
-                <div className="what-tags">AI Workflow Automation</div>
                 <div className="what-tags">n8n</div>
-                <div className="what-tags">Claude &amp; OpenAI</div>
+                <div className="what-tags">Claude &amp; Claude Code</div>
+                <div className="what-tags">OpenAI</div>
                 <div className="what-tags">Antigravity</div>
+                <div className="what-tags">Stitch</div>
                 <div className="what-tags">Redux</div>
               </div>
               <div className="what-arrow"></div>
