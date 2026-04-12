@@ -5,28 +5,14 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
-    title: "FitFuel Nutrition",
-    category: "Google Ads Case Study",
-    tools: "Search Ads, GTM, Conversion Tracking, Scaling",
-    image: "/images/fitfuel.png",
-    link: "/project/fitfuel",
-  },
-  {
     title: "ADKraft",
     category: "AI-Powered Performance Marketing",
     tools: "Next.js, Antigravity, Claude, Meta/Google Ads Strategy",
     image: "/images/adkraft.png",
     link: "https://adkraft-website.vercel.app/",
-  },
-
-  {
-    title: "Coming Soon",
-    category: "Upcoming Project",
-    tools: "React, TypeScript, Marketing",
-    image: "/images/callhq.png",
-    link: "#",
   }
 ];
+
 
 const Work = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
