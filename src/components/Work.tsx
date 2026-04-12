@@ -5,6 +5,13 @@ import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 const projects = [
   {
+    title: "FitFuel Nutrition",
+    category: "Google Ads Case Study",
+    tools: "Search Ads, GTM, Conversion Tracking, Scaling",
+    image: "/images/fitfuel.png",
+    link: "/project/fitfuel",
+  },
+  {
     title: "Coming Soon",
     category: "Upcoming Project",
     tools: "React, TypeScript, Marketing",

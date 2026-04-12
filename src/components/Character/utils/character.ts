@@ -32,16 +32,29 @@ const setCharacter = (
               if (child.isMesh) {
                 const mesh = child as THREE.Mesh;
 
-                // Change clothing colors to match site theme
+                // Hide potential duplicate meshes often found in complex exports
+                if (mesh.name.includes("_Legacy") || mesh.name.includes("_Default") || mesh.name.includes(".00")) {
+                  mesh.visible = false;
+                  return;
+                }
+
+                // Apply colors from design tokens
                 if (mesh.material) {
-                  if (mesh.name === "BODY.SHIRT") { // The shirt mesh
+                  const meshName = mesh.name.toUpperCase();
+                  if (meshName.includes("SHIRT") || meshName.includes("BODY")) {
                     const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
-                    newMat.color = new THREE.Color("#8B4513");
+                    newMat.color = new THREE.Color("#1a1a1a"); // Premium dark charcoal
+                    newMat.roughness = 0.8;
                     mesh.material = newMat;
-                  } else if (mesh.name === "Pant") {
+                  } else if (meshName.includes("PANT")) {
                     const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
-                    newMat.color = new THREE.Color("#000000");
+                    newMat.color = new THREE.Color("#111111"); // Matches Fitfuel --surface
+                    newMat.roughness = 0.9;
                     mesh.material = newMat;
+                  } else if (meshName.includes("SKIN")) {
+                     const newMat = (mesh.material as THREE.Material).clone() as THREE.MeshStandardMaterial;
+                     newMat.roughness = 0.4;
+                     mesh.material = newMat;
                   }
                 }
 

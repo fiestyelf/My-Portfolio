@@ -18,8 +18,18 @@
   user-select: none;
   -webkit-user-select: none;
   -moz-user-select: none;
-  --accentColor: #5eead4;
+  /* Main Design Tokens */
+  --accentColor: #00E5B4; /* Premium Teal */
+  --teal: #00E5B4;
+  --orange: #FF5C1A;
+  --orange-dim: rgba(255, 92, 26, 0.12);
   --backgroundColor: #0a0e17;
+  --surface: #111111;
+  --surface2: #181818;
+  --border: rgba(255, 255, 255, 0.07);
+  --white: #F5F0EB;
+  --muted: rgba(245, 240, 235, 0.45);
+  
   --vh: 100vh;
   --vh: 100svh;
 }

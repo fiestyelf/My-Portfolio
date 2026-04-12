@@ -1,0 +1,996 @@
+.fitfuel-case-study {
+    --bg: #0a0a0a;
+    --surface: #111111;
+    --surface2: #181818;
+    --border: rgba(255, 255, 255, 0.07);
+    --orange: #FF5C1A;
+    --orange-dim: rgba(255, 92, 26, 0.12);
+    --orange-glow: rgba(255, 92, 26, 0.25);
+    --teal: #00E5B4;
+    --white: #F5F0EB;
+    --muted: rgba(245, 240, 235, 0.45);
+    --font-display: 'Bebas Neue', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    background: var(--bg);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+    min-height: 100vh;
+    position: relative;
+}
+
+.fitfuel-case-study * {
+    box-sizing: border-box;
+}
+
+/* ─── NOISE OVERLAY ─── */
+.fitfuel-case-study::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.35;
+}
+
+/* ─── NAV ─── */
+.fitfuel-case-study nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem 3rem;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border);
+}
+
+.fitfuel-case-study .nav-brand {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--teal);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.fitfuel-case-study .nav-back {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.fitfuel-case-study .nav-back:hover {
+    color: var(--orange);
+}
+
+/* ─── HERO ─── */
+.fitfuel-case-study .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 3rem 6rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.fitfuel-case-study .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(255, 92, 26, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse 50% 40% at 10% 80%, rgba(0, 229, 180, 0.08) 0%, transparent 50%);
+}
+
+.fitfuel-case-study .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(var(--border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.4) 30%, rgba(0, 0, 0, 0.2) 80%, transparent);
+}
+
+.fitfuel-case-study .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+}
+
+.fitfuel-case-study .hero-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--orange-dim);
+    border: 1px solid rgba(255, 92, 26, 0.3);
+    color: var(--orange);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.4rem 0.9rem;
+    border-radius: 2px;
+    margin-bottom: 2rem;
+    animation: fadeUp 0.8s ease both;
+}
+
+.fitfuel-case-study .hero-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: var(--orange);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1) }
+    50% { opacity: 0.4; transform: scale(0.7) }
+}
+
+.fitfuel-case-study .hero h1 {
+    font-family: var(--font-display);
+    font-size: clamp(4.5rem, 10vw, 9rem);
+    line-height: 0.92;
+    letter-spacing: 0.01em;
+    animation: fadeUp 0.8s 0.1s ease both;
+    color: var(--white);
+}
+
+.fitfuel-case-study .hero h1 span {
+    color: var(--orange);
+}
+
+.fitfuel-case-study .hero-sub {
+    font-size: 1.05rem;
+    color: var(--muted);
+    max-width: 480px;
+    margin-top: 1.8rem;
+    animation: fadeUp 0.8s 0.2s ease both;
+    font-weight: 300;
+}
+
+.fitfuel-case-study .hero-stats {
+    display: flex;
+    gap: 3rem;
+    margin-top: 3.5rem;
+    animation: fadeUp 0.8s 0.3s ease both;
+}
+
+.fitfuel-case-study .hero-stat-num {
+    font-family: var(--font-display);
+    font-size: 3rem;
+    color: var(--orange);
+    line-height: 1;
+}
+
+.fitfuel-case-study .hero-stat-label {
+    font-size: 0.72rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 0.3rem;
+    font-family: var(--font-mono);
+}
+
+.fitfuel-case-study .scroll-hint {
+    position: absolute;
+    bottom: 2.5rem;
+    right: 3rem;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    writing-mode: vertical-rl;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    animation: fadeUp 1s 0.6s ease both;
+}
+
+.fitfuel-case-study .scroll-hint::after {
+    content: '';
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--orange), transparent);
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── SECTIONS ─── */
+.fitfuel-case-study section {
+    padding: 7rem 3rem;
+}
+
+.fitfuel-case-study .section-label {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.fitfuel-case-study .section-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--orange);
+}
+
+.fitfuel-case-study h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: 0.02em;
+    margin-bottom: 3rem;
+}
+
+.fitfuel-case-study h2 span {
+    color: var(--orange);
+}
+
+/* ─── OVERVIEW GRID ─── */
+.fitfuel-case-study .overview-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: var(--border);
+    border: 1px solid var(--border);
+    max-width: 900px;
+}
+
+.fitfuel-case-study .overview-cell {
+    background: var(--surface);
+    padding: 2rem;
+    transition: background 0.2s;
+}
+
+.fitfuel-case-study .overview-cell:hover {
+    background: var(--surface2);
+}
+
+.fitfuel-case-study .overview-cell-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.6rem;
+}
+
+.fitfuel-case-study .overview-cell-val {
+    font-size: 1.05rem;
+    color: var(--white);
+    font-weight: 500;
+}
+
+/* ─── CHALLENGE ─── */
+.fitfuel-case-study .challenge-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.fitfuel-case-study .pain-points {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    margin-top: 1rem;
+}
+
+.fitfuel-case-study .pain-card {
+    background: var(--bg);
+    padding: 2rem 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s;
+}
+
+.fitfuel-case-study .pain-card:hover {
+    background: #0f0f0f;
+}
+
+.fitfuel-case-study .pain-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background: var(--orange);
+    transition: height 0.3s ease;
+}
+
+.fitfuel-case-study .pain-card:hover::before {
+    height: 100%;
+}
+
+.fitfuel-case-study .pain-num {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    color: rgba(255, 92, 26, 0.12);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.fitfuel-case-study .pain-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+    color: var(--white);
+}
+
+.fitfuel-case-study .pain-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* ─── KPIs ─── */
+.fitfuel-case-study .kpi-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.fitfuel-case-study .kpi-primary {
+    background: var(--orange);
+    padding: 2.5rem;
+    color: #0a0a0a;
+}
+
+.fitfuel-case-study .kpi-primary-label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.6;
+    margin-bottom: 0.8rem;
+}
+
+.fitfuel-case-study .kpi-primary-val {
+    font-family: var(--font-display);
+    font-size: 3.5rem;
+    line-height: 1;
+    color: #0a0a0a;
+}
+
+.fitfuel-case-study .kpi-primary-sub {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+.fitfuel-case-study .kpi-secondary {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.fitfuel-case-study .kpi-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    padding: 1.2rem 1.5rem;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.fitfuel-case-study .kpi-item:hover {
+    border-color: rgba(255, 92, 26, 0.3);
+    background: var(--surface2);
+}
+
+.fitfuel-case-study .kpi-icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.fitfuel-case-study .kpi-text {
+    font-size: 0.9rem;
+    color: var(--white);
+    font-weight: 400;
+}
+
+/* ─── STRATEGY TIMELINE ─── */
+.fitfuel-case-study .timeline {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: var(--border);
+    margin-top: 2rem;
+}
+
+.fitfuel-case-study .phase-card {
+    background: var(--surface);
+    padding: 3rem 2.5rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.fitfuel-case-study .phase-card.phase-2 {
+    background: var(--surface2);
+}
+
+.fitfuel-case-study .phase-num {
+    font-family: var(--font-display);
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.03);
+    position: absolute;
+    top: -1.5rem;
+    right: 1.5rem;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.fitfuel-case-study .phase-tag {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--orange);
+    margin-bottom: 0.6rem;
+}
+
+.fitfuel-case-study .phase-title {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+}
+
+.fitfuel-case-study .phase-period {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    margin-bottom: 2rem;
+    letter-spacing: 0.08em;
+}
+
+.fitfuel-case-study .phase-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.fitfuel-case-study .phase-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7rem;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.fitfuel-case-study .phase-detail::before {
+    content: '→';
+    color: var(--orange);
+    flex-shrink: 0;
+    font-size: 0.8rem;
+    margin-top: 0.1rem;
+}
+
+/* ─── CAMPAIGN STRUCTURE ─── */
+.fitfuel-case-study .campaign-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+    margin-bottom: 3rem;
+}
+
+.fitfuel-case-study .ad-group-card {
+    background: var(--surface);
+    padding: 2rem;
+    transition: background 0.2s;
+}
+
+.fitfuel-case-study .ad-group-card:hover {
+    background: var(--surface2);
+}
+
+.fitfuel-case-study .ag-label {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.8rem;
+}
+
+.fitfuel-case-study .ag-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+    color: var(--white);
+}
+
+.fitfuel-case-study .ad-copy-lines {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.fitfuel-case-study .ad-line {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.7rem;
+    border-left: 2px solid transparent;
+}
+
+.fitfuel-case-study .ad-line.h1 {
+    border-color: var(--orange);
+    background: var(--orange-dim);
+    color: var(--white);
+}
+
+.fitfuel-case-study .ad-line.h2 {
+    border-color: rgba(0, 229, 180, 0.4);
+    background: rgba(0, 229, 180, 0.06);
+    color: var(--white);
+}
+
+.fitfuel-case-study .ad-line.h3 {
+    border-color: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.03);
+    color: var(--muted);
+}
+
+.fitfuel-case-study .ad-line-tag {
+    font-family: var(--font-mono);
+    font-size: 0.55rem;
+    color: var(--muted);
+    display: block;
+    margin-bottom: 0.15rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+/* ─── BIDDING ─── */
+.fitfuel-case-study .bidding-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5px;
+    background: var(--border);
+    margin-top: 1.5rem;
+}
+
+.fitfuel-case-study .bid-card {
+    background: var(--surface);
+    padding: 2.5rem;
+}
+
+.fitfuel-case-study .bid-title {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    margin-bottom: 0.3rem;
+    line-height: 1;
+}
+
+.fitfuel-case-study .bid-subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    color: var(--orange);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1.5rem;
+}
+
+.fitfuel-case-study .bid-reasons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.fitfuel-case-study .bid-reason {
+    font-size: 0.83rem;
+    color: var(--muted);
+    padding-left: 1rem;
+    border-left: 1px solid var(--border);
+    line-height: 1.5;
+}
+
+/* ─── RESULTS ─── */
+.fitfuel-case-study .results-section {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+}
+
+.fitfuel-case-study .results-section::before {
+    content: 'RESULTS';
+    position: absolute;
+    top: 3rem;
+    right: -1rem;
+    font-family: var(--font-display);
+    font-size: clamp(6rem, 15vw, 14rem);
+    color: rgba(255, 92, 26, 0.04);
+    line-height: 1;
+    pointer-events: none;
+}
+
+.fitfuel-case-study .results-hero {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.fitfuel-case-study .result-big {
+    font-family: var(--font-display);
+    font-size: clamp(7rem, 15vw, 13rem);
+    color: var(--orange);
+    line-height: 0.85;
+    position: relative;
+}
+
+.fitfuel-case-study .result-big-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    margin-top: 0.5rem;
+}
+
+.fitfuel-case-study .results-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: var(--border);
+}
+
+.fitfuel-case-study .metric-card {
+    background: var(--bg);
+    padding: 2rem 1.8rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.2s;
+}
+
+.fitfuel-case-study .metric-card:hover {
+    background: #0c0c0c;
+}
+
+.fitfuel-case-study .metric-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(to right, var(--orange), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s 0.2s ease;
+}
+
+.fitfuel-case-study .metric-card:hover .metric-bar {
+    transform: scaleX(1);
+}
+
+.fitfuel-case-study .metric-val {
+    font-family: var(--font-display);
+    font-size: 2.8rem;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 0.3rem;
+}
+
+.fitfuel-case-study .metric-val span {
+    color: var(--orange);
+}
+
+.fitfuel-case-study .metric-label {
+    font-size: 0.78rem;
+    color: var(--muted);
+    margin-bottom: 0.3rem;
+}
+
+.fitfuel-case-study .metric-note {
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    color: rgba(245, 240, 235, 0.25);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ─── NEGATIVE KEYWORDS ─── */
+.fitfuel-case-study .neg-kw-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.fitfuel-case-study .neg-kw-group {
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+}
+
+.fitfuel-case-study .neg-kw-title {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--orange);
+    margin-bottom: 1rem;
+}
+
+.fitfuel-case-study .neg-kw-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.fitfuel-case-study .neg-tag {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border);
+    color: var(--muted);
+    padding: 0.25rem 0.6rem;
+    border-radius: 1px;
+}
+
+.fitfuel-case-study .impact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+}
+
+.fitfuel-case-study .impact-card {
+    background: var(--surface);
+    padding: 2rem;
+}
+
+.fitfuel-case-study .impact-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    color: var(--orange);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+}
+
+.fitfuel-case-study .impact-desc {
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+/* ─── LANDING PAGE AUDIT ─── */
+.fitfuel-case-study .audit-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: var(--border);
+}
+
+.fitfuel-case-study .audit-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 2rem;
+    align-items: start;
+    background: var(--surface);
+    padding: 2rem 2.5rem;
+    transition: background 0.2s;
+}
+
+.fitfuel-case-study .audit-item:hover {
+    background: var(--surface2);
+}
+
+.fitfuel-case-study .audit-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--orange-dim);
+    border: 1px solid rgba(255, 92, 26, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.2rem;
+}
+
+.fitfuel-case-study .audit-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+    color: var(--white);
+}
+
+.fitfuel-case-study .audit-desc {
+    font-size: 0.82rem;
+    color: var(--muted);
+}
+
+/* ─── LEARNINGS ─── */
+.fitfuel-case-study .learnings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--border);
+}
+
+.fitfuel-case-study .learning-card {
+    background: var(--surface);
+    padding: 2.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s;
+}
+
+.fitfuel-case-study .learning-card:hover {
+    background: var(--surface2);
+}
+
+.fitfuel-case-study .learning-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--orange), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.fitfuel-case-study .learning-card:hover::after {
+    transform: scaleX(1);
+}
+
+.fitfuel-case-study .learning-num {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: rgba(255, 92, 26, 0.1);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.fitfuel-case-study .learning-title {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+}
+
+.fitfuel-case-study .learning-desc {
+    font-size: 0.83rem;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+/* ─── FOOTER ─── */
+.fitfuel-case-study footer {
+    padding: 5rem 3rem;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fitfuel-case-study .footer-credit {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+}
+
+.fitfuel-case-study .footer-credit strong {
+    color: var(--orange);
+}
+
+.fitfuel-case-study .back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    padding: 0.8rem 1.5rem;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.fitfuel-case-study .back-btn:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+/* ─── SEPARATOR ─── */
+.fitfuel-case-study .sep {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0 3rem;
+}
+
+/* ─── SCROLL REVEAL ─── */
+.fitfuel-case-study .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.fitfuel-case-study .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+    .fitfuel-case-study nav {
+        padding: 1rem 1.5rem;
+    }
+
+    .fitfuel-case-study section {
+        padding: 5rem 1.5rem;
+    }
+
+    .fitfuel-case-study .hero {
+        padding: 0 1.5rem 5rem;
+    }
+
+    .fitfuel-case-study .kpi-row,
+    .fitfuel-case-study .timeline,
+    .fitfuel-case-study .bidding-layout,
+    .fitfuel-case-study .results-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .fitfuel-case-study .results-metrics,
+    .fitfuel-case-study .neg-kw-grid,
+    .fitfuel-case-study .learnings-grid,
+    .fitfuel-case-study .campaign-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fitfuel-case-study .overview-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fitfuel-case-study .impact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .fitfuel-case-study footer {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .fitfuel-case-study .sep {
+        margin: 0 1.5rem;
+    }
+}

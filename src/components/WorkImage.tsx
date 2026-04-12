@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { MdArrowOutward } from "react-icons/md";
 
 interface Props {
@@ -21,6 +22,36 @@ const WorkImage = (props: Props) => {
     }
   };
 
+  const isInternal = props.link?.startsWith("/");
+
+  const content = (
+    <>
+      {props.link && (
+        <div className="work-link">
+          <MdArrowOutward />
+        </div>
+      )}
+      <img src={props.image} alt={props.alt} />
+      {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
+    </>
+  );
+
+  if (isInternal && props.link) {
+    return (
+      <div className="work-image">
+        <Link
+          className="work-image-in"
+          to={props.link}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={() => setIsVideo(false)}
+          data-cursor={"disable"}
+        >
+          {content}
+        </Link>
+      </div>
+    );
+  }
+
   return (
     <div className="work-image">
       <a
@@ -31,13 +62,7 @@ const WorkImage = (props: Props) => {
         target="_blank"
         data-cursor={"disable"}
       >
-        {props.link && (
-          <div className="work-link">
-            <MdArrowOutward />
-          </div>
-        )}
-        <img src={props.image} alt={props.alt} />
-        {isVideo && <video src={video} autoPlay muted playsInline loop></video>}
+        {content}
       </a>
     </div>
   );

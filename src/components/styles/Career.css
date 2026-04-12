@@ -17,7 +17,7 @@
   line-height: 70px;
   font-weight: 400;
   text-align: center;
-  background: linear-gradient(0deg, #0d9488, #ffffff);
+  background: linear-gradient(0deg, var(--accentColor), var(--white));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -93,8 +93,8 @@
   width: 3px;
   height: 100%;
   background-image: linear-gradient(to top,
-      #14b8a6 20%,
-      var(--accentColor) 50%,
+      var(--accentColor) 20%,
+      var(--teal) 50%,
       transparent 95%);
   max-height: 0%;
 }
@@ -104,12 +104,12 @@
   bottom: 0;
   left: 50%;
   transform: translate(-50%, 50%);
-  background-color: #14b8a6;
+  background-color: var(--accentColor);
   width: 10px;
   height: 10px;
   border-radius: 50px;
-  box-shadow: 0px 0px 5px 2px #67e8f9, 0px 0px 15px 8px #5eead4,
-    0px 0px 110px 20px #a5f3fc;
+  box-shadow: 0px 0px 5px 2px var(--accentColor), 0px 0px 15px 8px var(--teal),
+    0px 0px 110px 20px rgba(0, 229, 180, 0.3);
   animation: timeline 0.8s linear infinite forwards;
 }
 
