@@ -96,10 +96,11 @@ const WhatIDo = () => {
               <div className="what-content-flex">
                 <div className="what-tags">Google Ads</div>
                 <div className="what-tags">Meta Ads</div>
+                <div className="what-tags">TikTok Ads</div>
+                <div className="what-tags">Snapchat & Pinterest Ads</div>
                 <div className="what-tags">Google Analytics GA4</div>
-                <div className="what-tags">CRM (Salesforce)</div>
-                <div className="what-tags">Canva</div>
-                <div className="what-tags">Content Strategy</div>
+                <div className="what-tags">GTM & Conversion Tracking</div>
+                <div className="what-tags">HubSpot & CRM</div>
                 <div className="what-tags">Market Research</div>
               </div>
               <div className="what-arrow"></div>
@@ -132,12 +133,12 @@ const WhatIDo = () => {
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
                 <div className="what-tags">React &amp; TypeScript</div>
-                <div className="what-tags">n8n</div>
+                <div className="what-tags">n8n Automation</div>
                 <div className="what-tags">Claude &amp; Claude Code</div>
-                <div className="what-tags">OpenAI</div>
                 <div className="what-tags">Antigravity</div>
+                <div className="what-tags">OpenAI API</div>
                 <div className="what-tags">Stitch</div>
-                <div className="what-tags">Redux</div>
+                <div className="what-tags">Agentic Workflows</div>
               </div>
               <div className="what-arrow"></div>
             </div>

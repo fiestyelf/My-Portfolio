@@ -12,6 +12,14 @@ const projects = [
     link: "/project/fitfuel",
   },
   {
+    title: "ADKraft",
+    category: "AI-Powered Performance Marketing",
+    tools: "Next.js, Antigravity, Claude, Meta/Google Ads Strategy",
+    image: "/images/adkraft.png",
+    link: "https://adkraft-website.vercel.app/",
+  },
+
+  {
     title: "Coming Soon",
     category: "Upcoming Project",
     tools: "React, TypeScript, Marketing",
