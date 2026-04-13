@@ -23,7 +23,7 @@ const projects = [
     category: "AI Market Research Tool",
     tools: "React, AI Agents, Market Analysis, Rapid Prototyping",
     image: "/images/ideavalidator.png",
-    link: "https://idea-validator.vercel.app/",
+    link: "https://idea-validator-cyan.vercel.app/",
   }
 ];
 
