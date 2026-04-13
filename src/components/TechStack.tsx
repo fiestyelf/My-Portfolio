@@ -18,16 +18,22 @@ const imageUrls = [
   "/images/node2.webp",
   "/images/typescript.webp",
   "/images/javascript.webp",
-  "https://placehold.co/256/10A37F/FFFFFF/png?text=OpenAI",
-  "https://placehold.co/256/D97757/FFFFFF/png?text=Claude",
-  "https://placehold.co/256/FF6C37/FFFFFF/png?text=n8n",
-  "https://placehold.co/256/000000/FFFFFF/png?text=Anti-Grav",
+  "/images/openai.png",
+  "/images/claude.png",
+  "/images/n8n.png",
+  "/images/google_ads.png",
+  "/images/meta_ads.png",
+  "/images/hubspot.png",
+  "/images/tiktok.png",
+  "/images/ga4.png",
+  "/images/antigravity.png",
+  "/images/stitch.png",
 ];
 const textures = imageUrls.map((url) => textureLoader.load(url));
 
 const sphereGeometry = new THREE.SphereGeometry(1, 28, 28);
 
-const spheres = [...Array(30)].map(() => ({
+const spheres = [...Array(40)].map(() => ({
   scale: [0.7, 1, 0.8, 1, 1][Math.floor(Math.random() * 5)],
 }));
 

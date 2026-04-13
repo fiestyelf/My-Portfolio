@@ -10,6 +10,20 @@ const projects = [
     tools: "Next.js, Antigravity, Claude, Meta/Google Ads Strategy",
     image: "/images/adkraft.png",
     link: "https://adkraft-website.vercel.app/",
+  },
+  {
+    title: "FitFuel Nutrition",
+    category: "Performance Marketing Case Study",
+    tools: "Google Ads (Search & Discovery), GTM, GA4, Scaling Strategy",
+    image: "/images/fitfuel.png",
+    link: "/project/fitfuel",
+  },
+  {
+    title: "IdeaValidator",
+    category: "AI Market Research Tool",
+    tools: "React, AI Agents, Market Analysis, Rapid Prototyping",
+    image: "/images/ideavalidator.png",
+    link: "https://ideavalidator.vercel.app/",
   }
 ];
 
@@ -48,23 +62,26 @@ const Work = () => {
         </h2>
 
         <div className="carousel-wrapper">
-          {/* Navigation Arrows */}
-          <button
-            className="carousel-arrow carousel-arrow-left"
-            onClick={goToPrev}
-            aria-label="Previous project"
-            data-cursor="disable"
-          >
-            <MdArrowBack />
-          </button>
-          <button
-            className="carousel-arrow carousel-arrow-right"
-            onClick={goToNext}
-            aria-label="Next project"
-            data-cursor="disable"
-          >
-            <MdArrowForward />
-          </button>
+          {projects.length > 1 && (
+            <>
+              <button
+                className="carousel-arrow carousel-arrow-left"
+                onClick={goToPrev}
+                aria-label="Previous project"
+                data-cursor="disable"
+              >
+                <MdArrowBack />
+              </button>
+              <button
+                className="carousel-arrow carousel-arrow-right"
+                onClick={goToNext}
+                aria-label="Next project"
+                data-cursor="disable"
+              >
+                <MdArrowForward />
+              </button>
+            </>
+          )}
 
           {/* Slides */}
           <div className="carousel-track-container">
@@ -106,18 +123,20 @@ const Work = () => {
           </div>
 
           {/* Dot Indicators */}
-          <div className="carousel-dots">
-            {projects.map((_, index) => (
-              <button
-                key={index}
-                className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
-                  }`}
-                onClick={() => goToSlide(index)}
-                aria-label={`Go to project ${index + 1}`}
-                data-cursor="disable"
-              />
-            ))}
-          </div>
+          {projects.length > 1 && (
+            <div className="carousel-dots">
+              {projects.map((_, index) => (
+                <button
+                  key={index}
+                  className={`carousel-dot ${index === currentIndex ? "carousel-dot-active" : ""
+                    }`}
+                  onClick={() => goToSlide(index)}
+                  aria-label={`Go to project ${index + 1}`}
+                  data-cursor="disable"
+                />
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </div>
