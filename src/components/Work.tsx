@@ -24,6 +24,13 @@ const projects = [
     tools: "React, AI Agents, Market Analysis, Rapid Prototyping",
     image: "/images/ideavalidator.png",
     link: "https://idea-validator-cyan.vercel.app/",
+  },
+  {
+    title: "Carbon Removal Credit",
+    category: "Social Media & NGO Growth",
+    tools: "Content Strategy, Meta Business Suite, Organic Growth, NGO Branding",
+    image: "/images/carbon_removal.png",
+    link: "/project/carbon-removal",
   }
 ];
 
