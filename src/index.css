@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Fira+Code:wght@300..700&display=swap");
 
 :root {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Geist", "Space Grotesk", sans-serif;
+  --font-mono: "Fira Code", "Geist Mono", monospace;
 
   font-optical-sizing: auto;
   font-style: normal;
@@ -40,7 +42,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Geist Sans", "Space Grotesk", sans-serif;
 }
 
 body {

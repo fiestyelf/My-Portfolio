@@ -21,10 +21,10 @@ const Contact = () => {
             </p>
             <h4>Education</h4>
             <p>
-              MBA, International Business, University of Europe for Applied Sciences, Berlin — Present
+              MBA, International Business, University of Europe for Applied Sciences, Berlin, Present
             </p>
             <p>
-              BBA in Business Analytics, Christ University — 2023
+              BBA in Business Analytics, Christ University, 2023
             </p>
           </div>
           <div className="contact-box">

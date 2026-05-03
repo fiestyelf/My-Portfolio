@@ -71,8 +71,9 @@
 .what-content p {
   font-size: 14px;
   line-height: 18px;
-  font-weight: 200;
+  font-weight: 400;
   letter-spacing: 0.7px;
+  color: var(--white);
 }
 .what-content h4 {
   font-weight: 300;

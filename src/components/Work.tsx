@@ -1,4 +1,5 @@
 import { useState, useCallback } from "react";
+import { MatrixText } from "./MatrixText";
 import "./styles/Work.css";
 import WorkImage from "./WorkImage";
 import { MdArrowBack, MdArrowForward } from "react-icons/md";
@@ -7,6 +8,7 @@ const projects = [
   {
     title: "ADKraft",
     category: "AI-Powered Performance Marketing",
+    description: "An AI platform that builds performance marketing strategies and ad copy in seconds using advanced language models.",
     tools: "Next.js, Antigravity, Claude, Meta/Google Ads Strategy",
     image: "/images/adkraft.png",
     link: "https://adkraft-website.vercel.app/",
@@ -14,6 +16,7 @@ const projects = [
   {
     title: "FitFuel Nutrition",
     category: "Performance Marketing Case Study",
+    description: "A deep dive into scaling a nutrition brand through aggressive Google Ads testing and conversion tracking optimization.",
     tools: "Google Ads (Search & Discovery), GTM, GA4, Scaling Strategy",
     image: "/images/fitfuel.png",
     link: "/project/fitfuel",
@@ -21,6 +24,7 @@ const projects = [
   {
     title: "IdeaValidator",
     category: "AI Market Research Tool",
+    description: "An automated research tool that uses AI agents to validate startup ideas and analyze market demand instantly.",
     tools: "React, AI Agents, Market Analysis, Rapid Prototyping",
     image: "/images/ideavalidator.png",
     link: "https://idea-validator-cyan.vercel.app/",
@@ -28,6 +32,7 @@ const projects = [
   {
     title: "Carbon Removal Credit",
     category: "Social Media & NGO Growth",
+    description: "Strategic organic growth and community building for an environmental NGO, focused on driving awareness for carbon credits.",
     tools: "Content Strategy, Meta Business Suite, Organic Growth, NGO Branding",
     image: "/images/carbon_removal.png",
     link: "/project/carbon-removal",
@@ -65,7 +70,7 @@ const Work = () => {
     <div className="work-section" id="work">
       <div className="work-container section-container">
         <h2>
-          My <span>Work</span>
+          <MatrixText text="My" className="text-inherit" /> <span><MatrixText text="Work" className="text-inherit" initialDelay={400} /></span>
         </h2>
 
         <div className="carousel-wrapper">
@@ -111,6 +116,7 @@ const Work = () => {
                           {project.category}
                         </p>
                         <div className="carousel-tools">
+                          <p className="project-description">{project.description}</p>
                           <span className="tools-label">Tools & Features</span>
                           <p>{project.tools}</p>
                         </div>

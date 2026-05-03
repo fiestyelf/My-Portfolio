@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { MatrixText } from "./MatrixText";
 import "./styles/WhatIDo.css";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -28,9 +29,9 @@ const WhatIDo = () => {
     <div className="whatIDO">
       <div className="what-box">
         <h2 className="title">
-          W<span className="hat-h2">HAT</span>
+          <MatrixText text="WHAT" className="text-inherit" />
           <div>
-            I<span className="do-h2"> DO</span>
+            <MatrixText text="I DO" className="text-inherit" initialDelay={600} />
           </div>
         </h2>
       </div>
@@ -90,7 +91,7 @@ const WhatIDo = () => {
               <h3>DIGITAL MARKETING</h3>
               <h4>Client Acquisition & Analytics</h4>
               <p>
-                I work on lead generation and client acquisition, with a focus on tracking what the numbers actually say and adjusting campaigns based on that.
+                I specialize in lead generation and client acquisition strategy. For me, it's not just about spending budget, it's about understanding the data, finding the gaps, and scaling what works.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">
@@ -128,7 +129,7 @@ const WhatIDo = () => {
               <h3>FRONTEND DEV & AI AUTOMATION</h3>
               <h4>Interactive UIs & Agentic Workflows</h4>
               <p>
-                I build frontend apps with React and TypeScript, and I'm actively learning how to wire up AI agents and automation pipelines using tools like n8n, Claude, and OpenAI.
+                I'm deeply interested in the intersection of code and AI. Beyond building clean React interfaces, I'm constantly experimenting with agentic workflows and automation to make marketing and development faster and smarter.
               </p>
               <h5>Skillset & tools</h5>
               <div className="what-content-flex">

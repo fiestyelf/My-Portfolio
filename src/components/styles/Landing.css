@@ -205,12 +205,14 @@
   z-index: 9;
 }
 
+
 .landing-info h3 {
   font-size: 22px;
   letter-spacing: 2px;
   font-weight: 300;
   color: var(--accentColor);
   margin: 0;
+  white-space: nowrap;
 }
 
 .landing-info h2 {
@@ -234,11 +236,11 @@
 }
 
 h2.landing-info-h2 {
-  color: #14b8a6;
+  color: var(--white);
   font-size: 42px;
   width: 120%;
   margin: 0;
-  font-family: "Geist", sans-serif;
+  font-family: "Geist Sans", sans-serif;
   font-weight: 600;
   position: relative;
   margin-left: -5px;

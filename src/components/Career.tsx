@@ -1,3 +1,4 @@
+import { MatrixText } from "./MatrixText";
 import "./styles/Career.css";
 
 const Career = () => {
@@ -5,8 +6,7 @@ const Career = () => {
     <div className="career-section section-container">
       <div className="career-container">
         <h2>
-          My career <span>&</span>
-          <br /> experience
+          <MatrixText text="My career" className="text-inherit" /> <span><MatrixText text="&" className="text-inherit" initialDelay={600} /></span> <MatrixText text="experience" className="text-inherit" initialDelay={800} />
         </h2>
         <div className="career-info">
           <div className="career-timeline">
@@ -21,7 +21,7 @@ const Career = () => {
               <h3>NOW</h3>
             </div>
             <p>
-              Pursuing an MBA in International Business. Graduated with a BBA in Business Analytics from Christ University in 2023.
+              Right now, I’m in Berlin finishing my MBA. It’s where I’m really starting to bridge the gap between business strategy and the more technical side of marketing.
             </p>
           </div>
           <div className="career-info-box">
@@ -30,10 +30,10 @@ const Career = () => {
                 <h4>Marketing Specialist</h4>
                 <h5>Antrajaal, India</h5>
               </div>
-              <h3>2024–25</h3>
+              <h3>2024 25</h3>
             </div>
             <p>
-              Provided L2 technical support for a Salesforce-based B2B telecommunications platform, escalating complex issues via Jira and coordinating with engineering teams to resolve bugs.
+              I was heavily involved in social media marketing, running ads across different platforms and figuring out what content actually gets people to stop scrolling. It was all about testing new ideas and making sure our social campaigns were bringing in high-quality leads.
             </p>
           </div>
           <div className="career-info-box">
@@ -42,10 +42,10 @@ const Career = () => {
                 <h4>Sales & Marketing Executive</h4>
                 <h5>Saket Fincorp, India</h5>
               </div>
-              <h3>2023–24</h3>
+              <h3>2023 24</h3>
             </div>
             <p>
-              Developed frontend features for an enterprise airline booking platform using React, TypeScript, and Redux. Participated in client requirement discussions and collaborated closely with backend developers.
+              This is where I learned the ropes of sales and marketing. I worked on reaching out to customers and started to understand what really makes people decide to engage with a brand.
             </p>
           </div>
         </div>
